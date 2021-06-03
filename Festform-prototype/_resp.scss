@@ -1,0 +1,19 @@
+// RESPONSIVE STYLING
+
+@media screen and (max-width: 1920px) {
+    .shift-table{
+        width: 100%;
+    }
+    .sub-group.right{
+        float: right;
+        width: 46%;
+    }
+    .sub-group input{
+        width: 100%;
+    }
+    .sub-group.left{
+        float: left;
+        width: 46%;
+    }
+}
+

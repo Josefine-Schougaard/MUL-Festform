@@ -1,0 +1,212 @@
+//tester styling
+
+h2, h3, p{
+    font-family: $fontprimary;
+}
+
+p{
+    line-height: 1.5;
+}
+
+#box{
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+//Sub groups
+
+.sub-group.right, .right{
+    float: right;
+    
+}
+
+.sub-group.left, .right{
+    float: left;
+}
+
+.sub-group.outline input{
+    @include borders();
+    background-color: transparent;
+}
+
+.sub-group{
+    label{
+        display: block;
+        font-size: $labelsize;
+        color: $shadow;
+        font-family: $fontprimary;
+        line-height: 1.5;
+    }
+    ::placeholder{
+        font-size: $placeholdersize;
+        font-family: $fontprimary;
+    }
+    :-ms-input-placeholder{
+        font-size: $placeholdersize;
+        font-family: $fontprimary;
+    }
+    ::-ms-input-placeholder{
+        font-size: $placeholdersize;
+        font-family: $fontprimary;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; 
+    }
+    input{
+        height: $medium-tall;
+        margin: 8px 0 8px 0; 
+        @include borders();
+    }
+   
+}
+
+.comment{
+    textarea{
+        width: 100%;
+        height: 100px;
+        @include borders;
+        font-family: $fontprimary;
+    }
+    label{
+        display: block;
+        font-size: $labelsize;
+        color: $shadow;
+        font-family: $fontprimary;
+        line-height: 1.5;
+    }
+}
+
+// Widths
+.w100{
+    width: 100%;
+}
+
+.w50{
+    width: 49%;
+}
+
+// table styling
+
+.shift-clr-ocean td{
+    background-color: $ocean;
+} 
+.shift-clr-sun td{
+    background-color: $sun;
+}
+.shift-clr-grass td{
+    background-color: $grass;
+}
+
+.shift-outline td{
+    background-color: transparent;;
+}
+
+.shifts{
+    thead td{
+        padding: $low;
+        @include borders();
+        font-family: $fontprimary;
+        font-size: $cellfontsize;
+        color: $shadow;
+        text-align: center;
+    }
+    tbody td{
+        padding: $low;
+        @include borders();
+        font-family: $fontprimary;
+        font-size: $cellfontsize;
+        color: $shadow;
+        text-align: center;
+    }
+}
+
+.shift-clr-ocean td.isSelected{
+    background-color: $lightocean ;
+}
+
+
+.clickable{
+    cursor: pointer;
+}
+
+// buttons
+
+.butn{
+    padding: 10px 100px;
+    border-radius: $rounded;
+    @include borders();
+    font-size: $placeholdersize;
+    background-color: $cloud;
+    color: $shadow;
+    font-family: $fontprimary
+}
+
+.outline-butn{
+    background-color: transparent;
+}
+
+
+//borders
+
+.no-border{
+    @include no-borders();
+}
+
+// checks (checkbox with collaps)
+
+input[type=checkbox]{
+    cursor: pointer;
+}
+
+.checks{
+    display: inline-block;
+    margin: 10px 0;
+    font-family: $fontprimary;
+    line-height: 1.5;
+}
+
+
+// Collapse box
+
+.collapse{
+    display: inline;
+    cursor: pointer;
+}
+
+.collapse-content.open{
+    padding: $low 5px;
+}
+
+.collapse-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    // -webkit-transition: max-height 0.5s ease-in-out;
+    // -moz-transition: max-height 0.5s ease-in-out;
+    // -ms-transition: max-height 0.5s ease-in-out;
+    // -o-transition: max-height 0.5s ease-in-out;
+    // transition: max-height 0.5s ease-in-out;
+}
+
+//Invalid
+
+.invalid{
+    color: $warning;
+}
+
+input.invalid{
+    @include warning();
+}
+
+// center
+
+.center{
+    margin: 0 auto;
+    display: block;
+}

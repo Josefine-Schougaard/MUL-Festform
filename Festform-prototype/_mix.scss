@@ -1,0 +1,15 @@
+// Borders
+@mixin borders(){
+    border: 1px solid $gravel;
+    border-radius: $rounded;
+}
+
+@mixin no-borders(){
+    border: none;
+}
+
+
+@mixin warning() {
+    border: 2px solid $warning;
+
+}
